@@ -24,7 +24,7 @@ public class springConfig {
         return new MemberService(memberRepository());
     }
 
-    @Bean
+    @Bean // 다형성
     public MemberRepository memberRepository() {
         return new JdbcMemberRepository(dataSource);
     }
